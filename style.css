@@ -1,0 +1,263 @@
+/* GLOBAL STYLE */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.heading-primary {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3.052rem;
+}
+
+/* MAIN LAYOUT */
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    padding: 10px;
+}
+
+.main__left {
+    text-align: center;
+}
+
+.main__right {
+    /* background: orangered; */
+}
+
+/* (LEFT SIDE) INPUT CONTROLLER STYLE */
+
+.input__box {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 1.6rem;
+}
+
+/* Color input style */
+.input__color {
+    appearance: none;
+    width: 100%;
+    height: 5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.input__color::-webkit-color-swatch {
+    border-radius: 0.2rem;
+    border: none;
+}
+
+.input__color::-moz-color-swatch {
+    border-radius: 0.2rem;
+    border: none;
+}
+
+/* color mode buttons */
+input[type="radio"] {
+    display: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    transition: all 0.4s;
+    background-color: #eee;
+    color: #333;
+}
+
+#color-regular:checked + .btn {
+    background-color: #333;
+    color: #fff;
+}
+
+#color-rainbow:checked + .btn {
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet
+    );
+}
+
+/* range input for grid size style */
+.input__grid-title-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.input__grid-size-box {
+    width: 100%;
+}
+
+.input__range {
+    width: 100%;
+    height: 25px;
+    appearance: none;
+    background-color: #d3d3d3;
+    outline: none;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
+.input__range:hover {
+    opacity: 1;
+}
+
+.input__range::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04aa6d;
+    cursor: pointer;
+}
+
+.input__range::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04aa6d;
+}
+
+/* Main grid style */
+.main__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+}
+.grid__container {
+    background-color: orangered;
+}
+/* Responsive design */
+@media screen and (max-width: 1050px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .main__left {
+        position: absolute;
+        top: 0;
+        left: -300px;
+        height: 100vh;
+        width: 300px;
+        transition: all 0.2s;
+
+        background-color: #efefef;
+    }
+
+    .main__container {
+        grid-template-columns: 1fr;
+    }
+
+    .input__box--color {
+        margin-top: 8rem;
+    }
+
+    .input__color {
+        height: 12rem;
+    }
+
+    /* Mobile navigation style */
+    .head__container {
+        margin-top: 1rem;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .nav__button {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        margin-left: 1rem;
+        z-index: 1000;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav__button--icon {
+        position: relative;
+        height: 2px;
+        width: 80%;
+        background-color: #333;
+        align-self: center;
+        transition: all 0.3s;
+    }
+
+    .nav__button--icon::before {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 70%;
+        background-color: #333;
+        top: -6px;
+    }
+
+    .nav__button--icon::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 70%;
+        background-color: #333;
+        top: 6px;
+    }
+
+    .main__left.nav--active {
+        left: 0;
+    }
+
+    .nav__button--active .nav__button--icon {
+        background-color: transparent;
+    }
+
+    .nav__button--active .nav__button--icon::after {
+        width: 80%;
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav__button--active .nav__button--icon::before {
+        width: 80%;
+        transform: rotate(135deg);
+        top: 0;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .heading-primary {
+        font-size: 2rem;
+    }
+}

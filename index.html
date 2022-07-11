@@ -9,6 +9,45 @@
     <title>ETCH-A-SKETCH</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="head__container">
+            <div class="nav__button">
+                <div class="nav__button--icon"></div>
+            </div>
+            <h1 class="heading-primary">Each a sketch game</h1>
+        </div>
+
+        <div class="main__container">
+            <div class="main__left">
+                <div class="input__box input__box--color">
+                    <input class="input__color" type="color" name="color" id="color-input" value="#3d3d3d">
+                </div>
+
+                <div class="input__box input__box--color-regular">
+                    <input type="radio" name="color" id="color-regular" checked>
+                    <label for="color-regular" class="btn btn__regular">Color regular</label>
+                </div>
+
+                <div class="input__box input__box--color-rainbow">
+                    <input type="radio" name="color" id="color-rainbow">
+                    <label for="color-rainbow" class="btn btn__rainbow">Color Rainbow</label>
+                </div>
+
+                <div class="input__box input__box--grid-size">
+                    <div class="input__grid-title-box">
+                        <div class="input__title">Grid Size &colon;</div>
+                        <div id="range_indicator" class="input__size_indicator"></div>
+                    </div>
+                    <div class="input__grid-size-box">
+                        <input class="input__range" type="range" id="range_input" min="2" max="100" step="2" value="16">
+                    </div>
+                </div>
+
+            </div>
+            <div class="main__right">
+                <div class="grid__container"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

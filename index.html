@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-    <title>ETCH-A-SKETCH</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Each a sketch</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading-primary">Each A Sketch</h1>
+      <div class="game-container">
+        <div class="game-controls" id="game-controls">
+          <h2>Controls</h2>
+          <div class="ctrl-box color">
+            <input type="color" name="color" class="ctrl-color" id="color" />
+          </div>
+          <div class="ctrl-box">
+            <button class="btn ctrl-btn btn-rainbow" id="color-btn">
+              Color Mode
+            </button>
+          </div>
+          <div class="ctrl-box">
+            <button class="btn ctrl-btn btn-color active" id="rainbow-btn">
+              Rainbow Mode
+            </button>
+          </div>
+          <div class="ctrl-box">
+            <button class="btn ctrl-btn btn-eraser" id="color-eraser">
+              Eraser
+            </button>
+          </div>
+          <div class="ctrl-box">
+            <button class="btn btn-clear">Clear</button>
+          </div>
+          <div class="ctrl-box">
+            <input type="range" name="grid-size" min="16" value="16" max="100" step="2" id="grid-size">
+            <label for="grid-size" id="grid-size-display">16</label>
+          </div>
+        </div>
+        <!-- Grid box -->
+        <div class="sketch-pad" id="sketch-pad">
+          <!-- Here will bet grid container and child items -->
+          <div id="grid-container"></div>
+        </div>
+        
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -1,2 +1,6 @@
-# etch-a-sketch
-Digital version of classic etch-a-sketch game with some cool extra cool feature!
+# Each-A-Sketch
+
+Digital version of classic etch-a-sketch game!
+
+Author: Shakibul Islam
+Live-Link:  

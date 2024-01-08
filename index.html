@@ -15,7 +15,7 @@
       <main class="game-container">
         <div class="game-controls" id="game-controls">
           <div class="ctrl-box color">
-            <input type="color" name="color" class="ctrl-color" id="color" />
+            <input type="color" name="color" class="color-input" id="color" />
           </div>
           <div class="ctrl-box">
             <button class="btn ctrl-btn btn-rainbow" id="color-btn">
@@ -35,7 +35,7 @@
           <div class="ctrl-box">
             <button class="btn btn-clear">Clear</button>
           </div>
-          <div class="ctrl-box">
+          <div class="ctrl-box size">
             <input
               type="range"
               name="grid-size"
@@ -44,16 +44,19 @@
               max="100"
               step="2"
               id="grid-size"
+              class="size-input"
             />
-            <label for="grid-size" id="grid-size-display"
+          </div>
+          <div class="ctrl-box size-lebel-box">
+            <label class="size-label" for="grid-size" id="grid-size-display"
               >Grid Size <span>16</span></label
             >
           </div>
         </div>
         <!-- Grid box -->
-        <div class="sketch-pad" id="sketch-pad">
+        <div class="square" id="sketch-pad">
           <!-- Here will bet grid container and child items -->
-          <div id="grid-container"></div>
+          <div class="sketch-pad" id="sketch-pad"></div>
         </div>
       </main>
       <footer>

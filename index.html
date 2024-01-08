@@ -9,10 +9,11 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="heading-primary">Each A Sketch</h1>
-      <div class="game-container">
+      <header>
+        <h1 class="heading-primary">Each A Sketch</h1>
+      </header>
+      <main class="game-container">
         <div class="game-controls" id="game-controls">
-          <h2>Controls</h2>
           <div class="ctrl-box color">
             <input type="color" name="color" class="ctrl-color" id="color" />
           </div>
@@ -35,8 +36,18 @@
             <button class="btn btn-clear">Clear</button>
           </div>
           <div class="ctrl-box">
-            <input type="range" name="grid-size" min="16" value="16" max="100" step="2" id="grid-size">
-            <label for="grid-size" id="grid-size-display">16</label>
+            <input
+              type="range"
+              name="grid-size"
+              min="16"
+              value="16"
+              max="100"
+              step="2"
+              id="grid-size"
+            />
+            <label for="grid-size" id="grid-size-display"
+              >Grid Size <span>16</span></label
+            >
           </div>
         </div>
         <!-- Grid box -->
@@ -44,8 +55,10 @@
           <!-- Here will bet grid container and child items -->
           <div id="grid-container"></div>
         </div>
-        
-      </div>
+      </main>
+      <footer>
+        <p>Created by Shakibul Islam (Shakib)</p>
+      </footer>
     </div>
     <script src="app.js"></script>
   </body>

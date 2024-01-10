@@ -9,27 +9,44 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1 class="heading-primary">Each A Sketch</h1>
-      </header>
-      <main class="game-container">
+      <h1 class="heading-primary">Each A Sketch</h1>
+      <div class="game-container">
         <div class="game-controls" id="game-controls">
+          <h2>Controls</h2>
           <div class="ctrl-box color">
-            <input type="color" name="color" class="color-input" id="color" />
+            <input type="color" name="color" class="ctrl-color" id="color" />
           </div>
           <div class="ctrl-box">
-            <button class="btn" id="color-btn">Color Mode</button>
+            <button
+              class="btn ctrl-btn btn-rainbow"
+              data-mode="color"
+              id="color-btn"
+            >
+              Color Mode
+            </button>
           </div>
           <div class="ctrl-box">
-            <button class="btn active" id="rainbow-btn">Rainbow Mode</button>
+            <button
+              class="btn ctrl-btn btn-color active"
+              data-mode="rainbow"
+              id="rainbow-btn"
+            >
+              Rainbow Mode
+            </button>
           </div>
           <div class="ctrl-box">
-            <button class="btn" id="color-eraser">Eraser</button>
+            <button
+              class="btn ctrl-btn btn-eraser"
+              data-mode="erase"
+              id="color-eraser"
+            >
+              Eraser
+            </button>
           </div>
           <div class="ctrl-box">
-            <button class="btn" id="btn-clear">Clear</button>
+            <button class="btn btn-clear">Clear</button>
           </div>
-          <div class="ctrl-box size">
+          <div class="ctrl-box">
             <input
               type="range"
               name="grid-size"
@@ -37,25 +54,17 @@
               value="16"
               max="100"
               step="2"
-              id="size-input"
-              class="size-input"
+              id="grid-size"
             />
-          </div>
-          <div class="ctrl-box size-lebel-box">
-            <label class="size-label" for="size-input" id="size-label"
-              >Grid Size <span id="size-display">16</span></label
-            >
+            <label for="grid-size" id="grid-size-display">16</label>
           </div>
         </div>
         <!-- Grid box -->
-        <div class="square" id="sketch-pad">
+        <div class="sketch-pad" id="sketch-pad">
           <!-- Here will bet grid container and child items -->
-          <div class="sketch-pad" id="sketch-pad"></div>
+          <div id="grid-container"></div>
         </div>
-      </main>
-      <footer>
-        <p>Created by Shakibul Islam (Shakib)</p>
-      </footer>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>

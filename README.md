@@ -4,6 +4,4 @@ Digital version of classic etch-a-sketch game!
 
 Author: Shakibul Islam
 
-Live-Link:
-
-## What i have learned
+Live link: https://shakib1010.github.io/etch-a-sketch-top/

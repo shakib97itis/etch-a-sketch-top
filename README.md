@@ -1,7 +1,20 @@
-# Each-A-Sketch
+# EACH-A-SKETCH GAME
 
-Digital version of classic etch-a-sketch game!
+## Overview
 
-Author: Shakibul Islam
+Digital version of classic etch-a-sketch game
 
-Live link: https://shakib1010.github.io/etch-a-sketch-top/
+### Links
+
+- Live Site URL: https://shakib97itis.github.io/etch-a-sketch-top/
+
+## My process
+
+### Built with
+
+- HTML, CSS, JavaScript.
+
+## Author
+
+- Github Profile - [Shakibul Islam](https://github.com/shakib97itis)
+- Linkedin Profile - [Shakibul Islam](https://www.linkedin.com/in/shakib97itis/)
